@@ -1,0 +1,2 @@
+class TimMaiaError(Exception):
+    pass
