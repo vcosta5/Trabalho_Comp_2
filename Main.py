@@ -16,26 +16,16 @@ while True:
     comando = input('Insira seu comando: ')
 
     if comando == '1':
-        nome = input('Insira seu nome completo: ')
-        nome_de_usuario = input('Insira seu nome de usuário: ')
-
-        i = 0
-        while i == 0:
-            senha = input('Insira sua senha: ')
-            try:
-                confirmar_senha = input('Confirme sua senha: ')
-                if confirmar_senha != senha:
-                    raise TimMaiaError
-                i += 1
-            except TimMaiaError:
-                print('Suas senhas não batem')
-
-        novo_user = Usuario(nome, senha, nome_de_usuario)
+        criar_user = bancodedados.criar_user()
+        novo_user = Usuario(criar_user[0],criar_user[1],criar_user[2])
         bancodedados.adc_usuarios(novo_user)
         bancodedados.listar_usuarios()
                 
     if comando == '2':
-        pass
+        dados = bancodedados.entrar()
+        print(dados)
+        user_ativo = Usuario(dados[0],dados[1])
+        user_ativo.logar()
 
     if comando == '3':
         break
