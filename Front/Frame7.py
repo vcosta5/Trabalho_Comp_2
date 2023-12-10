@@ -13,7 +13,7 @@ from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 #OUTPUT_PATH = Path(__file__).parent
 #ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\vcost\OneDrive\Área de Trabalho\Tkinter-Designer-master\build\assets\frame0")
 script_directory = Path(os.path.dirname(os.path.abspath(__file__)))
-ASSETS_PATH = script_directory / "build" / "assets" / "frame6"
+ASSETS_PATH = script_directory / "build" / "assets" / "frame7"
 
 def relative_to_assets(path: str) -> Path:
     return ASSETS_PATH / Path(path)
